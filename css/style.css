@@ -80,6 +80,32 @@ body {
 .btn-login:hover {
   background-color: #4661e6;
 }
+ .mobile-buttons{
+   display: none;
+ }
+.m-menu-button,
+.search-button {
+  padding: 5px;
+  background-color: #fff;
+  border:none;
+  outline: none;
+  cursor: pointer;
+ }
+ .m-menu-button:hover,
+ .search-button:hover {
+   background-color: #eee;
+ }
+
+.menu-line {
+  display: block;
+  height: 2px;
+  background-color: #000;
+  width: 16px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  border-radius: 40px;
+  }
+
 /* Главный блок сайте*/
 
 .container {
@@ -117,6 +143,9 @@ main {
   padding-bottom: 25px;
   padding-top: 25px;
   cursor: pointer;
+}
+.trailer-button:hover{
+  background-color: #eee;
 }
 /* Настройка текстового содержимого справа от постера */
 
@@ -410,6 +439,74 @@ td {
   .news {
     padding-top: 50px;
     padding-bottom: 70px;
+  }
+  .main-header {
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+  }
+  .mobile-buttons {
+    display: block;
+  }
+}
+
+@media (max-width:576px){
+  .container{
+    width: 95%;
+  }
+  .film-title {
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 12px;
+  }
+  .film-subtitle{
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .film-description{
+    font-size: 14px;
+    line-height: 150%;
+    margin-bottom: 40px;
+  }
+  .about-film{
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .about-text-bold{
+    display: inline-block;
+  }
+  .film-trailer,
+  .poster {
+    width: 100%;
+  }
+  .film-trailer{
+    margin-bottom: 30px;
+  }
+  .button-group {
+    display: none;
+  }
+  .search-input, .line {
+    display: none;
+  } 
+
+  .film-text {
+    order: 1;
+    margin-bottom: 0;
+  }
+  .card{
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+  .card-image {
+    width: 60px;
+    height: 60px;
+  }
+  .tabs {
+    margin-bottom: 35px;
+  }
+ 
+  .news {
+    padding-top: 35px;
   }
 }
 
