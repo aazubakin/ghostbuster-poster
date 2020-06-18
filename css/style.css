@@ -13,6 +13,7 @@ body {
   border-bottom: 1px solid #d4d4d4;
   padding-left: 34px;
   height: 104px;
+  outline: none;
 }
 .line {
   height: 100%;
@@ -53,7 +54,10 @@ body {
   border: none;
   height: 100%;
   cursor: pointer;
+  outline: none;
+  margin-right: -4px;
 }
+
 .btn-signup {
   background-color: #fff;
   color: #5671f6;
@@ -61,11 +65,17 @@ body {
   padding-right: 34px;
   border-left: 1px solid #d4d4d4;
 }
+.btn-signup:hover{
+  background-color: #eee;
+}
 .btn-login {
   color: #ffffff;
   background-color: #5671f6;
   padding-left: 50px;
   padding-right: 50px;
+}
+.btn-login:hover {
+  background-color: #4661e6;
 }
 /* Главный блок сайте*/
 
@@ -182,8 +192,9 @@ td {
   font-size: 28px;
   line-height: 33px;
   border: 1px solid #5671F6;
-  border-radius: 10px;;
+  border-radius: 10px;
   margin-right: 28px;
+  font-weight: bold;
 }
 .raiting-title {
   font-weight: bold;
@@ -201,6 +212,8 @@ td {
 .raiting-text-bold {
   font-weight: bold;
 }
+
+/* Блок с актерами */
 .casts {
   padding-top: 70px;
   padding-bottom: 100px;
