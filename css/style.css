@@ -6,15 +6,23 @@ body {
   font-weight: 300;
   color: #363636;
 }
+.no-scroll {
+  overflow: hidden;
+}
 .main-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   flex-wrap: nowrap;
   border-bottom: 1px solid #d4d4d4;
   padding-left: 34px;
   height: 104px;
   outline: none;
+}
+.m-menu {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex-grow: 1;
 }
 .line {
   height: 100%;
@@ -143,6 +151,7 @@ main {
   padding-bottom: 25px;
   padding-top: 25px;
   cursor: pointer;
+  text-decoration: none;
 }
 .trailer-button:hover{
   background-color: #eee;
@@ -346,6 +355,7 @@ td {
 @media (max-width:1200px) {
   .container {
     max-width: 960px;
+    margin: auto;
   }
   .card-image {
     width: 70px;
@@ -380,6 +390,7 @@ td {
 @media (max-width:991px) {
   .container {
     max-width: 760px;
+    margin: auto;
   }
   .navigation {
     display: none;
@@ -416,10 +427,69 @@ td {
 
 @media (max-width:768px) {
   .container {
-    max-width: 560px;
+    width: 560px;
+    margin: auto;
   }
   .main-header {
     height: 80px;
+  }
+  .m-menu {
+   position: fixed; 
+   display: none;
+   flex-direction: column;
+   align-items:center;
+   justify-content: space-around;
+   top: 70px;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   background-color: #5671F6;
+   height: calc(100%-70px);
+   
+  }
+  .m-menu.active-button {
+    display: flex;
+    transition-delay: 2s;
+    }
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  .button-group {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 70px;
+    
+  }
+  .search-input {
+    margin: 0;
+    width: 260px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    background-image: none;
+
+  }
+  .navigation-link {
+    color: #fff;
+    margin-bottom: 18px;
+    margin-right: 0;
+  }
+  .navigation-link:last-child {
+    margin-bottom: 0;
+  }
+  .btn-signup {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    margin-bottom: 30px;
+  }
+  .btn-signup:hover {
+    background-color: #4661e6;
   }
   main {
     padding-top: 50px;
@@ -446,12 +516,14 @@ td {
   }
   .mobile-buttons {
     display: block;
+    margin-left: auto;
   }
 }
 
 @media (max-width:576px){
   .container{
     width: 95%;
+    margin: auto;
   }
   .film-title {
     font-size: 20px;
@@ -475,13 +547,15 @@ td {
   .about-text-bold{
     display: inline-block;
   }
-  .film-trailer,
-  .poster {
-    width: 100%;
-  }
   .film-trailer{
     margin-bottom: 30px;
   }
+  .film-trailer,
+  .poster {
+    width: 100%;    
+    margin-right: 0;
+  }
+  
   .button-group {
     display: none;
   }
@@ -507,6 +581,15 @@ td {
  
   .news {
     padding-top: 35px;
+  }
+  .mobile-buttons {
+    display: block;
+  }
+  .section-title {
+    margin-bottom: 10px;
+  }
+  .casts {
+    padding-bottom: 30px;
   }
 }
 
