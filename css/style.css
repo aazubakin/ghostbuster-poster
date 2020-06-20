@@ -281,9 +281,15 @@ td {
   color: #363636;
 }
 .tabs-content {
-  display: flex;
+  display: none;
   align-items: center;
   flex-wrap: wrap;
+}
+.tabs-content.visible {
+  display: flex;
+}
+.tab {
+  cursor: pointer;
 }
 .card {
   flex-basis: 25%;
